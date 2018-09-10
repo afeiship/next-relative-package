@@ -9,7 +9,12 @@ import ReactCkeditorWeibo from './main';
 class App extends React.Component {
   state = {
     token: require('./token.json').token,
-    value: '<h2>TITLTEasdlfjlsafd</h2><p>asdflkjsadf</p><p>&nbsp;</p><p>asdfjasdf</p><p>&nbsp;</p><p>asdfsadf</p>'
+    value: `
+      <h2>Hello</h2>
+      <p>ckeditor is a very good editor</p>
+      <p>React is so good</p>
+      <p>Ruby lang is wonderful!</p>
+    `
   };
 
   constructor(props) {
@@ -26,7 +31,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="hello-react-ckeditor-weibo">
-        <ReactCkeditorWeibo value={this.state.value} onChange={this._onChange} token={this.state.token} ref='rc' />
+        <ReactCkeditorWeibo
+          value={this.state.value}
+          onChange={this._onChange}
+          token={this.state.token}
+          ref='rc'
+        />
       </div>
     );
   }
