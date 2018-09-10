@@ -43,7 +43,7 @@ export default class extends Component {
   /*===properties end===*/
 
   render() {
-    const { className, token, adapterOptions, ...props } = this.props;
+    const { className, token, ...props } = this.props;
     return (
       <ReactCkeditor
         onChange={this._onChange}
