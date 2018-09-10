@@ -7,6 +7,7 @@ import objectAssign from 'object-assign';
 import NxWeiboOss from 'next-weibo-oss';
 import ReactCkeditor from 'react-ckeditor';
 
+//TODO: move to a standalone package:
 class WeiboImageUploadAdapter {
 
   constructor(inLoader, inOptions) {
@@ -32,12 +33,11 @@ export default class extends Component {
   static propTypes = {
     className: PropTypes.string,
     token: PropTypes.string,
-    value: PropTypes.object,
+    value: PropTypes.string,
     onChange: PropTypes.func
   };
 
   static defaultProps = {
-    value: null,
     onChange: noop
   };
   /*===properties end===*/
