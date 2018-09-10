@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import noop from 'noop';
 import objectAssign from 'object-assign';
 import ReactCkeditor from 'react-ckeditor';
-import WeiboImageUploadAdapter from './weibo-image-upload-adapter';
+import ImageUploadAdapter from './image-upload-adapter';
 
 export default class extends Component {
   /*===properties start===*/
@@ -28,7 +28,7 @@ export default class extends Component {
         onChange={this._onChange}
         className={classNames('react-ckeditor-weibo', className)}
         adapterOptions={{ token }}
-        imageUploadAdapter={WeiboImageUploadAdapter}
+        imageUploadAdapter={ImageUploadAdapter}
         {...props}
       />
     );
