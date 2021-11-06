@@ -15,7 +15,8 @@ npm install -S @jswork/next-relative-package
 ```js
 import '@jswork/next-relative-package';
 
-//DOCS here!
+nx.relativePackage(); // { ...the whole package.json ... }
+nx.relativePackage('publishConfig.registry'); // https://registry.npmjs.org/
 ```
 
 ## license
