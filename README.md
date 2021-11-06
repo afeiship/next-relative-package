@@ -1,80 +1,34 @@
-# react-ckeditor-weibo
-> CKEditor component for weibo oss based on react
+# next-relative-package
+> Get root path package.json.
 
-## properties:
-```javascript
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
-  static propTypes = {
-    className: PropTypes.string,
-    token: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func
-  };
-
-  static defaultProps = {
-    onChange: noop
-  };
-  
-```
-
-## install && import:
+## installation
 ```bash
-npm install --save afeiship/react-ckeditor-weibo --registry=https://registry.npm.taobao.org
+npm install -S @jswork/next-relative-package
 ```
 
+## usage
 ```js
-import ReactCkeditorWeibo from 'react-ckeditor-weibo';
+import '@jswork/next-relative-package';
+
+//DOCS here!
 ```
 
-```scss
-// customize your styles:
-$react-ckeditor-weibo-options:(
-);
+## license
+Code released under [the MIT license](https://github.com/afeiship/next-relative-package/blob/master/LICENSE.txt).
 
-@import 'node_modules/react-ckeditor-weibo/dist/style.scss';
-```
+[version-image]: https://img.shields.io/npm/v/@jswork/next-relative-package
+[version-url]: https://npmjs.org/package/@jswork/next-relative-package
 
+[license-image]: https://img.shields.io/npm/l/@jswork/next-relative-package
+[license-url]: https://github.com/afeiship/next-relative-package/blob/master/LICENSE.txt
 
-## usage:
-```jsx
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-relative-package
+[size-url]: https://github.com/afeiship/next-relative-package/blob/master/dist/next-relative-package.min.js
 
-// install: npm install afeiship/react-ckeditor-weibo --save
-// import : import ReactCkeditorWeibo from 'react-ckeditor-weibo'
-
-class App extends React.Component {
-  state = {
-    token: require('./token.json').token,
-    value: `
-      <h2>Hello</h2>
-      <p>ckeditor is a very good editor</p>
-      <p>React is so good</p>
-      <p>Ruby lang is wonderful!</p>
-    `
-  };
-
-  constructor(props) {
-    super(props);
-    window.demo = this;
-    window.refs = this.refs;
-    window.rc = this.refs.rc;
-  }
-
-  _onChange = e => {
-    console.log(e.target.value);
-  };
-
-  render() {
-    return (
-      <div className="hello-react-ckeditor-weibo">
-        <ReactCkeditorWeibo
-          value={this.state.value}
-          onChange={this._onChange}
-          token={this.state.token}
-          ref='rc'
-        />
-      </div>
-    );
-  }
-}
-
-```
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-relative-package
+[download-url]: https://www.npmjs.com/package/@jswork/next-relative-package
